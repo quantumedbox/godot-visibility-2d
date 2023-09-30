@@ -1,6 +1,6 @@
 Example:
 ```gdscript
-$Visibility2D.Builder.init() \
+$Visibility2D.init_builder() \
     .view_point(get_global_mouse_position()) \
     .bounds(get_viewport_rect()) \
     .occluder($Line2D) \

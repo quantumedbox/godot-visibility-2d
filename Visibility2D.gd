@@ -28,15 +28,15 @@ var _open: PoolIntArray # of Segment indices
 var center: Vector2
 var output: PoolVector2Array
 
+func init_builder() -> Builder:
+    _endpoints.resize(0)
+    var result := Builder.new()
+    result.target = self
+    return result
+
 # todo: Ability to cache builder state for static geometry.
 class Builder:
     var target: Node
-
-    static func init() -> Builder:
-        _endpoints.resize(0)
-        var result := Builder.new()
-        result.target = self
-        return result
 
     func view_point(p_point: Vector2) -> Builder:
         target.center = p_point
